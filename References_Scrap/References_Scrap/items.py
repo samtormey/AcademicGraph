@@ -8,7 +8,7 @@
 import scrapy
 
 
-class ReferencesScrapItem(scrapy.Item):
+class Ref_Goodies(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    link = scrapy.Field()
+	num = scrapy.Field()
