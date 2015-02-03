@@ -131,7 +131,7 @@ print inv_index
 for i in range(cnt):
     if G[desired][i] != 0:
         Shw.add_node(i)
-        labels[i] = inv_index[i]
+        labels[i] = inv_index[i][0:6]
         Shw.add_edge(desired,i)
         theta = random.random()*2*numpy.pi
         r = pow(1-G[desired][i],7)
@@ -148,5 +148,5 @@ Shw.node[desired]['pos'] = (0,0)
 
 pos = nx.get_node_attributes(Shw,'pos')
 nx.draw(Shw,pos)
-nx.draw_networkx_labels(Shw,pos,labels,font_size=6)
+nx.draw_networkx_labels(Shw,pos,labels,font_size=14)
 plt.show()
